@@ -37,7 +37,7 @@ public class UsuarioControlador {
         return this.repositorio.save(dataUsuario);
     }
 
-    @PutMapping("[id")
+    @PutMapping("{id}")
     public Usuario update(@PathVariable String id, @Requestbody Usuario dataUsuario){
         Usuario usuario = this.repositorio.findById(id).orElse(null);
         if(usuario != null){
